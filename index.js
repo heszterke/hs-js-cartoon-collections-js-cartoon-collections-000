@@ -5,7 +5,8 @@ function dwarfRollCall(dwarves) {
    for (var i=0;i<dwarves.length;i++){
      array.push(`${i+1}. ${dwarves[i]} `)
    }
-   return array.join("");
+   array.splice(dwarves.length/2, dwarves.length/2);
+    return array.join(',');
 }
 
 var planeteerCalls = ["earth", "wind", "fire", "water", "heart"];
@@ -32,4 +33,16 @@ function findTheCheese (foods) {
     return foods[i];}
   } 
     return "no cheese!";
+  }
+  
+  var words = ['banana', 'boy', 'apple'];
+  
+  function wordsWithB(words){
+    var array =[];
+    for (var i=0; i<words.length; i++){
+      if (words[i][0] === 'b'){
+        array.push(words[i]);
+      }
+    }
+    return array;
   }
